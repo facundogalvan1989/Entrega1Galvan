@@ -1,0 +1,27 @@
+{% extends "AppTrabajo/herencia.html" %}
+
+{% load static %}
+
+{% block herencia %}
+
+<div style="background-color: whitesmoke;">
+    <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
+    <h1>Bienvenidos.</h1>
+    <br>
+    <h3>Buscador Gerente por legajo:</h3>
+    <form action="/AppTrabajo/buscar" method="GET">
+        <input type="number" name="legajo">
+        <input type="submit" value="buscar">
+    </form>
+</div>
+{% if gerente %}
+
+    <ul>
+	{% for g in gerente %}
+		<li> {{gerente.legajo}} </li>
+	{% endfor %}
+
+    </ul>
+
+    {% endif %}
+{% endblock %}

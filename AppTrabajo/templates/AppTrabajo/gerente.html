@@ -1,0 +1,19 @@
+{% extends "AppTrabajo/herencia.html" %}
+
+{% load static %}
+
+{% block herencia %}
+
+<div style="background-color: rgb(194, 114, 247);">
+    <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
+    <h1>Bienvenidos Gerentes</h1>
+    <br>
+    <ul>
+        {% for g in gerentes %}
+        <li>{{g.nombre}}</li>
+        {% endfor %}
+    </ul>
+    
+</div>
+
+{% endblock %}
