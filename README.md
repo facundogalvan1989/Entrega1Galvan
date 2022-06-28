@@ -29,6 +29,6 @@ Son las vistas creadas a partir de nuestros modelos y formularios para navegar p
 urls.py
 Ubicación de todas las rutas utilizadas en este proyecto.
 
-"Buscador Gerente por legajo"
+"Buscador Gerente por legajo":
 Al pie de la página de inicio es factible buscar a los gerentes segun su legajo.
 El programa consultará a la base de datos si existe; de ser así, devolerá el nombre buscado, de lo contrario lo informará.
