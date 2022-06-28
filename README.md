@@ -1,6 +1,6 @@
 # Entrega1Galvan
 
-Entrega intermedia del Proyecto final: Página web programada con Python y utilizando framework django
+Entrega intermedia del Proyecto final: Página web programada con Python y utilizando framework django.
 
 Documentos
 Creación de proyecto Django (python -m django startproject ProyectoCoder)
@@ -13,7 +13,8 @@ Se realiza herencias de padre a hijos renderizando las vistas a las plantillas s
 
 -------------------------------------------------------
 
-Inicio
+Inicio:
+
 Nos encontramos con una primera vista general,diferentes redirecciones y al pie de la misma un buscador de Legajos de Gerentes.
 
 Archivos py:
