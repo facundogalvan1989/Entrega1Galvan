@@ -9,9 +9,12 @@
     <h1>Bienvenidos Expedicionistas</h1>
     <br>
     <ul>
-        {% for e in expedicionistas %}
-        <li>{{e.nombre}} - Legajo: 
-            {{e.legajo}}</li>
+        {% for e in Expedicionista %}
+        <li>{{e}}</li>
+        <button>
+            <a href="{% url 'EliminarExpedicionista' e.legajo %}"> Eliminar</a>
+            <a href="{% url 'EditarExpedicionista' e.legajo %}"> Editar</a>
+        </button>
         {% endfor %}
     </ul>
 </div>

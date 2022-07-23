@@ -1,0 +1,22 @@
+{% extends "AppTrabajo/herencia.html" %}
+
+{% load static %}
+
+{% block herencia %}
+
+<div style="background-color: rgb(114, 247, 165);">
+    <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
+    <h1>Índice</h1>
+    <ul>
+
+      <a class="navbar-brand" href="{% url 'RegistroGerente' %}">⋅Registro Gerente⋅</a>
+      <a class="navbar-brand" href="{% url 'RegistroVendedor' %}">⋅Registro Vendedor⋅</a>
+      <a class="navbar-brand" href="{% url 'RegistroExpedicionista' %}">⋅Registro Expedicionista⋅</a>
+      <a class="navbar-brand" href="{% url 'LeerGerente' %}">⋅Ver Gerente⋅</a>
+      <a class="navbar-brand" href="{% url 'LeerVendedor' %}">⋅Ver Vendedor⋅</a>
+      <a class="navbar-brand" href="{% url 'LeerExpedicionista' %}">⋅Ver Expedicionista⋅</a>
+      <br>
+  </ul>
+</div>
+
+{% endblock %}

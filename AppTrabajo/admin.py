@@ -8,3 +8,5 @@ admin.site.register(Gerente)
 admin.site.register(Vendedor)
 
 admin.site.register(Expedicionista)
+
+admin.site.register(Avatar)

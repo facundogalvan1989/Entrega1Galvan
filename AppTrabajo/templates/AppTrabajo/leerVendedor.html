@@ -6,12 +6,15 @@
 
 <div style="background-color: rgb(194, 114, 247);">
     <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
-    <h1>Bienvenidos Gerentes</h1>
+    <h1>Vendedores</h1>
     <br>
     <ul>
-        {% for g in gerentes %}
-        <li>{{g.nombre}} - Legajo: 
-        {{g.legajo}}</li>
+        {% for v in Vendedor %}
+        <li>{{v}}</li>
+        <button>
+            <a href="{% url 'EliminarVendedor' v.legajo %}"> Eliminar</a>
+            <a href="{% url 'EditarVendedor' v.legajo %}"> Editar</a>
+        </button>
         {% endfor %}
     </ul>
     

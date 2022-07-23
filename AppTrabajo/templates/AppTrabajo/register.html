@@ -1,0 +1,23 @@
+{% extends "AppTrabajo/herencia.html" %}
+
+{% load static %}
+
+{% block herencia %}
+
+<div style="background-color: whitesmoke;">
+    <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
+    <h1>Registro usuarios.</h1>
+</head>
+<body>
+    <form action="" method="POST">{%csrf_token%}
+        
+        {{form.as_p}}
+
+        <button type="submit"> Registrar</button> 
+        <button><a href="login"> Sí ya tenes usuario, usá 'Login'</a></button>
+    </form>
+
+</body>
+</html>
+
+{% endblock %}

@@ -1,5 +1,7 @@
+from re import TEMPLATE
 from django.urls import path
 from AppTrabajo import views 
+from django.contrib.auth.views import LogoutView
 
 urlpatterns = [
     path('', views.inicio, name="Inicio"),
@@ -11,4 +13,18 @@ urlpatterns = [
     path('registroExpedicionista', views.registroExpedicionista, name="RegistroExpedicionista"),
     path('busquedaNombre', views.busquedaNombre, name="BusquedaNombre"),
     path('buscar/', views.buscar),
+    path("leerGerente", views.leerGerente, name="LeerGerente"),
+    path("eliminarGerente/<gerente_legajo>", views.eliminarGerente, name="EliminarGerente"),
+    path("editarGerente/<gerente_legajo>", views.editarGerente, name="EditarGerente"),
+    path("leerVendedor", views.leerVendedor, name="LeerVendedor"),
+    path("eliminarVendedor/<vendedor_legajo>", views.eliminarVendedor, name="EliminarVendedor"),
+    path("editarVendedor/<vendedor_legajo>", views.editarVendedor, name="EditarVendedor"),
+    path("leerExpedicionista", views.leerExpedicionista, name="LeerExpedicionista"),
+    path("eliminarExpedicionista/<expedicionista_legajo>", views.eliminarExpedicionista, name="EliminarExpedicionista"),
+    path("editarExpedicionista/<expedicionista_legajo>", views.editarExpedicionista, name="EditarExpedicionista"),
+    path("login", views.login_request, name="Login"),
+    path("register", views.register, name="Register"),
+    path('logout', LogoutView.as_view(template_name='AppTrabajo/logout.html'), name='logout'),
+    path("editarPerfil", views.editarPerfil, name="EditarPerfil"),
+    path("pages", views.pages, name="Pages")
     ]
